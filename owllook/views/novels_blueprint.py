@@ -16,6 +16,7 @@ from owllook.utils import ver_question
 
 novels_bp = Blueprint('novels_blueprint')
 novels_bp.static('/static/novels', CONFIG.BASE_DIR + '/static/novels')
+novels_bp.static('/static/plugin', CONFIG.BASE_DIR + '/static/plugin')
 
 
 @novels_bp.listener('before_server_start')

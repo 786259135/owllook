@@ -11,6 +11,7 @@ from owllook.config import RULES, LOGGER, REPLACE_RULES, ENGINE_PRIORITY, CONFIG
 
 md_bp = Blueprint('rank_blueprint', url_prefix='md')
 md_bp.static('/static/md', CONFIG.BASE_DIR + '/static/md')
+md_bp.static('/static/plugin', CONFIG.BASE_DIR + '/static/plugin')
 
 
 @md_bp.listener('before_server_start')
