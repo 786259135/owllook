@@ -1,6 +1,6 @@
 ## owllook - 在线小说搜索引擎
 
-[![Build Status](https://travis-ci.org/howie6879/owllook.svg?branch=master)](https://travis-ci.org/howie6879/owllook) [![Python3.6+](https://img.shields.io/badge/python-3.6%2B-orange.svg)](https://github.com/howie6879/owllook) [![license](https://img.shields.io/github/license/howie6879/owllook.svg)](https://github.com/howie6879/owllook)
+[![Build Status](https://travis-ci.org/786259135/owllook.svg?branch=master)](https://travis-ci.org/786259135/owllook) [![Python3.6+](https://img.shields.io/badge/python-3.6%2B-orange.svg)](https://github.com/786259135/owllook) [![license](https://img.shields.io/github/license/786259135/owllook.svg)](https://github.com/786259135/owllook)
 
 `owllook`是一个基于其他搜索引擎构建的垂直小说搜索引擎，owllook目的是让阅读更简单、优雅，让每位读者都有舒适的阅读体验，如**搜书、阅读、收藏、追更、推荐等功能**：
 
@@ -11,8 +11,8 @@
 衍生项目：
 
 - 终端看小说： [NIYT](https://github.com/howie6879/NIYT)
-- 小说监控工具：[owllook_gui](https://github.com/howie6879/owllook_gui)
-- 小说接口：[owllook_api](https://github.com/howie6879/owllook_api)
+- 小说监控工具：[owllook_gui](https://github.com/786259135/owllook_gui)
+- 小说接口：[owllook_api](https://github.com/786259135/owllook_api)
 
 **注意**：若将本项目部署并发行，请**声明来源**，本项目纯属**共享学习之用，不得用于商业！**
 
@@ -36,7 +36,7 @@ mongo以及redis装好后，进入项目目录，依照步骤执行：
 
 ```shell
 # 下载代码
-git clone https://github.com/howie6879/owllook
+git clone https://github.com/786259135/owllook
 cd owllook
 pip install pipenv
 pipenv install --python /Users/howie/anaconda3/envs/python36/bin/python3.6
@@ -52,7 +52,7 @@ gunicorn --bind 127.0.0.1:8001 --worker-class sanic.worker.GunicornWorker server
 
 # 方案二 推荐 
 # 直接下载镜像
-docker pull howie6879/owllook
+docker pull 786259135/owllook
 # 创建dev_owllook.env文件
 vim dev_owllook.env
 # 写入一些环境变量
@@ -68,7 +68,7 @@ MONGO_USERNAME=''
 MONGO_PASSWORD=''
 # end ===============
 # 运行 在dev_owllook.env里面填上数据库配置 数据库ip需要注意 请将连接ip设置为ifconfig显示的ip
-docker run --env-file ./dev_owllook.env -d -p 8001:8001 howie6879/owllook:latest
+docker run --env-file ./dev_owllook.env -d -p 8001:8001 786259135/owllook:latest
 # 也可以自己打包
 docker build -t owllook:0.1 .
 # 运行
