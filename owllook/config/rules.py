@@ -282,7 +282,7 @@ RULES = {
     # 已解析
     'www.kxs7.com': Rules('http://www.kxs7.com/', {'class': 'box_con'}, {'id': 'content'}),
     # 已解析
-    'www.biqudao.com': Rules('http://www.biqudao.com/', {'class': 'box_con'}, {'id': 'content'}),
+    'www.biqudao.com': Rules('https://www.biqudao.com/', {'class': 'box_con'}, {'id': 'content'}),
     # 已解析
     'www.nuomi9.com': Rules('0', {'class': 'box_con'}, {'id': 'content'}),
     # 已解析
@@ -560,7 +560,7 @@ RULES = {
     # 已解析
     'www.00ksw.net': Rules('0', {'class': 'box_con'}, {'id': 'content'}),
     # 已解析
-    'www.booktxt.net': Rules('http://www.booktxt.net/', {'class': 'box_con'}, {'id': 'content'}),
+    'www.booktxt.net': Rules('0', {'class': 'box_con'}, {'id': 'content'}),
     # 已解析
     'wanmeishijiexiaoshuo.org': Rules('1', {'class': 'bg'}, {'class': 'content'}),
     # 已解析
