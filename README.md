@@ -5,8 +5,9 @@
 `owllook`是一个基于其他搜索引擎构建的垂直小说搜索引擎，owllook目的是让阅读更简单、优雅，让每位读者都有舒适的阅读体验，如**搜书、阅读、收藏、追更、推荐等功能**：
 
 - 演示网址：[https://www.owllook.net/](https://www.owllook.net/)
-- 公众号：[**粮草小说**](http://oe7yjec8x.bkt.clouddn.com/howie/2018-03-13-%E7%B2%AE%E8%8D%89%E5%B0%8F%E8%AF%B4.jpg-blog.howie)，有兴趣的话可以关注下
+- 公众号：[**粮草小说**](https://www.owllook.net/static/novels/img/lcxs_show.jpg)，有兴趣的话可以关注下
 - 博客介绍：[https://www.howie6879.cn/post/22/](https://www.howie6879.cn/post/22/)
+- 个人公众号：[老胡的储物柜](https://ws1.sinaimg.cn/large/007i3XCUgy1fyamp8ip6cj309k09kdfs.jpg)
 
 衍生项目：
 
@@ -131,6 +132,17 @@ docker run --env-file ./dev_owllook.env -d -p 8001:8001 owllook:0.1
 
 这个是根据小说搜索次数显示的，每天刷新一次，使用多了就会有
 
+**为什么会出现302跳转？**
+
+为了防止直接运行服务被恶意域名绑定，所以作出如下修改：
+
+```shell
+vim config/config.py
+# 将 true 改为 false
+VAL_HOST = os.getenv('VAL_HOST', 'true')
+VAL_HOST = os.getenv('VAL_HOST', 'false')
+```
+
 **小说榜单页面为什么没有内容？**
 
 需要运行`owllook/spiders/spider_console.py`，
@@ -166,7 +178,9 @@ docker run --env-file ./dev_owllook.env -d -p 8001:8001 owllook:0.1
 
 **捐赠：**
 
-<img src="http://oe7yjec8x.bkt.clouddn.com/howie/2017-01-25-wx.png" width = "400" height = "400" alt="donate" align=center />
+> 美酒加咖啡，我只要喝一杯～
+
+<img src="https://ws1.sinaimg.cn/large/007i3XCUgy1fydjg9e5fsj30lq0lmgoj.jpg" width = "400" height = "400" alt="donate" align=center />
 
 
 感谢以下捐赠者，具体见[捐赠名单](./DONATE.md) ^_^
